@@ -9,7 +9,7 @@ import { Usuario } from '../models/form.model';
   providedIn: 'root',
 })
 export class UsuarioService {
-  baseUrl: String = environment.baseUrl;
+  baseUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
@@ -21,7 +21,7 @@ export class UsuarioService {
     return this.http.post<Usuario>(url, usuario, requestOptions);
   }
 
-  message(str: String): void {
+  message(str: string): void {
     this._snack.open(`${str}`, 'OK', {
       duration: 5000,
     });
