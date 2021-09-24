@@ -1,0 +1,32 @@
+mat-card {
+  width: 50vh;
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: ubuntu;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+mat-card .mat-card-title {
+  font-family: ubuntu;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  font-family: ubuntu;
+}
+
+mat-label {
+  font-family: ubuntu;
+}

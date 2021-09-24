@@ -1,0 +1,29 @@
+<mat-card class="mat-elevation-z8">
+  <mat-card-title>Informações</mat-card-title>
+  <form #f="ngForm" class="form-group" autocomplete="off">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome:</mat-label>
+      <input [(ngModel)]="usuario.nome" name="nome" matInput placeholder="Digite o seu nome" autocomplete="false"
+        class="form-control" required>
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>E-mail:</mat-label>
+      <input [(ngModel)]="usuario.email" [textMask]="{mask: emailMask}" name="email" matInput
+        placeholder="Digite o seu e-mail" length="11" autocomplete="false" class="form-control" required>
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone:</mat-label>
+      <input [(ngModel)]="usuario.telefone" name="telefone" matInput placeholder="Digite o seu telefone" prefix="+55 "
+        mask="(00) 00000-0000" autocomplete="false" class="form-control" required>
+      <mat-icon matSuffix>phone</mat-icon>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button [disabled]="!f.valid" color="primary" (click)="create()">
+    Cadastrar
+  </button>
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
