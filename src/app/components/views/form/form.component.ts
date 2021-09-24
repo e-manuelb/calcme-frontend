@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { Usuario } from './form.model';
+import { Usuario } from '../../../models/form.model';
 import emailMask from 'text-mask-addons/dist/emailMask';
 
 @Component({
